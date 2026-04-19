@@ -62,8 +62,9 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
 
-/* Anchor offset for fixed nav (matches scrolled nav height ~60px) */
-section[id] { scroll-margin-top: 64px; }
+/* scroll-padding-top já cuida do offset; não somar scroll-margin-top em sections. */
+/* #top (main) precisa cancelar o offset para a brand-link levar ao começo absoluto. */
+main#top { scroll-margin-top: -64px; }
 
 /* Focus accessibility */
 :focus { outline: none; }
