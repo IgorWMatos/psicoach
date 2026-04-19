@@ -60,10 +60,10 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 90px; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
 
-/* Anchor offset for fixed nav */
-section[id] { scroll-margin-top: 90px; }
+/* Anchor offset for fixed nav (matches scrolled nav height ~60px) */
+section[id] { scroll-margin-top: 64px; }
 
 /* Focus accessibility */
 :focus { outline: none; }
