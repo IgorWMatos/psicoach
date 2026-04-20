@@ -8,6 +8,7 @@
   /* Palette — editorial, warm, premium */
   --ink: #13141A;           /* deep foreground */
   --ink-soft: #2A2C36;
+  --ink-hover: #1A1C24;     /* dark-card hover bg */
   --paper: #F5F1EA;         /* warm ivory background */
   --paper-2: #FAF7F1;
   --cream: #EDE6DA;
@@ -688,7 +689,7 @@ p { margin: 0; }
   width: 44px;
   transition: transform .5s var(--ease);
 }
-.svc:hover { background: #1A1C24; }
+.svc:hover { background: var(--ink-hover); }
 .svc:hover .svc__icon { transform: rotate(-6deg) scale(1.08); }
 
 .svc h3 {
@@ -726,6 +727,7 @@ p { margin: 0; }
 .svc--light:hover { background: var(--cream); }
 .svc--light h3 { color: var(--ink); }
 .svc--light p { color: var(--mute); }
+.svc--light .svc__icon { color: var(--accent); }
 
 /* ---------- Method timeline ---------- */
 .method { padding: var(--sp-8) 0; background: var(--paper-2); border-top: 1px solid var(--line); }
@@ -1264,11 +1266,15 @@ p { margin: 0; }
 
 /* ---------- Fieldset (radio group) ---------- */
 fieldset.field {
+  display: block;
   border: 0;
   padding: 0;
   margin: 0;
+  min-inline-size: 0;
 }
 fieldset.field legend {
+  display: block;
+  width: 100%;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
